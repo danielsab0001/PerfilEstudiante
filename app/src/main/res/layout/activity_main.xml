@@ -24,6 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="@string/label_name"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
 
@@ -61,6 +62,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/label_matricula"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNameError" />
 
@@ -98,6 +100,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/label_carrera"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMatriculaError" />
 
@@ -133,6 +136,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/blue_primary"
         android:text="@string/btn_save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
