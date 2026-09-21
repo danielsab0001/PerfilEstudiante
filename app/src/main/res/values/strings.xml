@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">PerfilEstudiante</string>
+
+    <string name="label_name">Nombre</string>
+    <string name="hint_name">Ej. Juan Pérez</string>
+
+    <string name="label_matricula">Matrícula</string>
+    <string name="hint_matricula">Ej. 2024-00123</string>
+
+    <string name="label_carrera">Carrera</string>
+
+    <string-array name="carreras_array">
+        <item>Selecciona tu carrera</item>
+        <item>Ingeniería en Ciencias de la Computación</item>
+        <item>Ingeniería Civil</item>
+        <item>Ingeniería Industrial</item>
+        <item>Administración de Empresas</item>
+        <item>Contabilidad</item>
+    </string-array>
+
+    <string name="btn_save">Guardar</string>
+
 </resources>
