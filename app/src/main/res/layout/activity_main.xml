@@ -42,6 +42,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNameLabel" />
 
     <TextView
+        android:id="@+id/tvNameError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/error_name"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <TextView
         android:id="@+id/tvMatriculaLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,7 +62,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/label_matricula"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNameError" />
 
     <EditText
         android:id="@+id/etMatricula"
@@ -66,6 +79,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tvMatriculaLabel" />
 
     <TextView
+        android:id="@+id/tvMatriculaError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/error_matricula"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMatricula" />
+
+    <TextView
         android:id="@+id/tvCarreraLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,7 +99,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/label_carrera"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etMatricula" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMatriculaError" />
 
     <Spinner
         android:id="@+id/spinnerCarrera"
@@ -87,6 +113,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCarreraLabel" />
 
+    <TextView
+        android:id="@+id/tvCarreraError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/error_carrera"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCarrera" />
+
     <Button
         android:id="@+id/btnSave"
         android:layout_width="0dp"
@@ -97,5 +136,6 @@
         android:text="@string/btn_save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerCarrera" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCarreraError" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

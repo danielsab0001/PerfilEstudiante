@@ -20,4 +20,8 @@
 
     <string name="btn_save">Guardar</string>
 
+    <string name="error_name">El nombre es obligatorio</string>
+    <string name="error_matricula">La matrícula es obligatoria</string>
+    <string name="error_carrera">La carrera es obligatoria</string>
+
 </resources>
