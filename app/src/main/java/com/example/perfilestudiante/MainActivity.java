@@ -1,11 +1,16 @@
 package com.example.perfilestudiante;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.perfilestudiante.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String EXTRA_NOMBRE = "extra_nombre";
+    public static final String EXTRA_MATRICULA = "extra_matricula";
+    public static final String EXTRA_CARRERA = "extra_carrera";
 
     private ActivityMainBinding binding;
 
@@ -21,7 +26,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void guardarPerfil() {
         if (validarCampos()) {
+            String nombre = binding.etName.getText().toString().trim();
+            String matricula = binding.etMatricula.getText().toString().trim();
+            String carrera = binding.spinnerCarrera.getSelectedItem().toString();
 
+            Intent intent = new Intent(MainActivity.this, PerfilGuardadoActivity.class);
+            intent.putExtra(EXTRA_NOMBRE, nombre);
+            intent.putExtra(EXTRA_MATRICULA, matricula);
+            intent.putExtra(EXTRA_CARRERA, carrera);
+            startActivity(intent);
         }
     }
 
@@ -32,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         String matricula = binding.etMatricula.getText().toString().trim();
         int carreraSeleccionada = binding.spinnerCarrera.getSelectedItemPosition();
 
-        // Validar nombre
         if (nombre.isEmpty()) {
             binding.tvNameError.setVisibility(View.VISIBLE);
             esValido = false;
@@ -40,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             binding.tvNameError.setVisibility(View.GONE);
         }
 
-        // Validar matrícula
         if (matricula.isEmpty()) {
             binding.tvMatriculaError.setVisibility(View.VISIBLE);
             esValido = false;
@@ -48,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
             binding.tvMatriculaError.setVisibility(View.GONE);
         }
 
-        // Validar carrera (posición 0 = "Selecciona tu carrera", cuenta como vacío)
         if (carreraSeleccionada == 0) {
             binding.tvCarreraError.setVisibility(View.VISIBLE);
             esValido = false;

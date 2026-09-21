@@ -24,4 +24,11 @@
     <string name="error_matricula">La matrícula es obligatoria</string>
     <string name="error_carrera">La carrera es obligatoria</string>
 
+    <string name="resumen_titulo">Aquí está tu información:</string>
+    <string name="saludo_formato">¡Hola, %1$s!</string>
+    <string name="resumen_formato">Nombre: %1$s\nMatrícula: %2$s\nCarrera: %3$s</string>
+    <string name="btn_editar">Editar</string>
+
+    <string name="toast_guardado">Perfil guardado correctamente</string>
+
 </resources>
